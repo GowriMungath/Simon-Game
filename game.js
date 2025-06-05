@@ -38,10 +38,7 @@ function animatePress(currentColour){
 }
 
 function checkAnswer(currentLevel){
- console.log(userClickedPattern)
- console.log(gamePattern)
  if(userClickedPattern[currentLevel]==gamePattern[currentLevel]){
-    console.log("success");
     if(gamePattern.length==userClickedPattern.length){
         setTimeout(function () {
             nextSequence();
@@ -49,7 +46,6 @@ function checkAnswer(currentLevel){
     }
  }
  else{
-    console.log("wrong");
     playSound("wrong")
     $("body").addClass('game-over')
     setTimeout(() => {
